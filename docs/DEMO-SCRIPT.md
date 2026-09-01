@@ -2,14 +2,16 @@
 
 ## Production target
 
-- Runtime: **2:45–2:52**, never 3:00 or longer after YouTube processing
+- Runtime: **2:23.529** (143.529 seconds), safely below the three-minute limit
 - Format: **16:9, 1920×1080, 30 fps**
 - Destination: public YouTube link for the WebMCP Challenge submission
-- Style: show the real public Site and real WebMCP interaction; use short title cards only to clarify the story
-- Audio: clear English narration throughout the core demo; music is optional and should remain well below the voice
+- Style: proof-led product tour using the real Challenge Edition and its native WebMCP interaction
+- Audio: clear English narration with synchronized captions; no music or sound effects
 - Core message: **Agent speed. Human authority.**
 
-Use a clean browser profile with no personal bookmarks, accounts, notifications, tokens, local paths, or private staging tabs visible. Record the final public challenge URL, not the owner-only pilot.
+The demo contains only the standalone fictional Challenge Edition. It does not
+show the owner-only pilot, an authenticated account, private routes, secrets,
+notifications, or unrelated browser tabs.
 
 ## Exact judge prompt
 
@@ -17,172 +19,155 @@ Use this text without changing its meaning or values:
 
 > Use GhostLayer's tools to find the fictional customer with phone +1-202-555-0120. Then prepare a $125 invoice draft for “September accessibility audit”. Stop and let me approve before anything is created.
 
-## Timed shot and narration plan
+## Final timed narration and shot plan
 
-### 0:00–0:10 — Open on the thesis
-
-**Picture**
-
-- Full-screen GhostLayer social card or the Site hero.
-- On-screen text: `GhostLayer` and `Agent speed. Human authority.`
-
-**Narration**
-
-> Browser agents are fast, but websites still make them guess how the interface works. GhostLayer replaces that guesswork with explicit WebMCP tools—and keeps the human in control of consequential actions.
-
-### 0:10–0:27 — Establish the problem and the surface
+### 0:00.000–0:14.549 — Fast without guessing
 
 **Picture**
 
-- Reveal the public challenge homepage.
-- Slowly frame the three principles: Discover, Collaborate, Control.
-- Land on the WebMCP status and the two tool names.
+- Contrast brittle UI guessing with an explicit agent-tool surface.
+- Resolve on the GhostLayer thesis card: **Agent speed. Human authority.**
 
 **Narration**
 
-> This fictional CRM publishes two page-owned tools. `find_customer` is a structured read. `create_invoice_draft` is consequential, so the site—not the agent—owns validation and approval.
+> Browser agents can move fast. But when a website makes them guess the interface, speed becomes brittle. GhostLayer replaces guessing with explicit tools, while humans retain authority over consequential actions.
 
-### 0:27–0:42 — Show discoverability, not UI guessing
+### 0:14.549–0:29.866 — The page owns the contract
 
 **Picture**
 
-- Show the agent's discovered tool list with `find_customer` and `create_invoice_draft`.
-- Keep the Site visible enough that viewers can connect the tool surface to the page.
+- Establish the real public sandbox.
+- Tour **find_customer** as a structured read and **create_invoice_draft** as a consequential, human-governed tool.
+- End on **validate → preview → approve**.
 
 **Narration**
 
-> The agent discovers names, descriptions, and schemas directly from the website. It does not need the visual position of a button or a brittle DOM recipe.
+> This fictional C R M publishes two page-owned tools. find_customer is a structured read. create_invoice_draft is consequential, so the website, not the agent, owns validation, effect preview, and approval.
 
-### 0:42–0:58 — Give the exact prompt
+### 0:29.866–0:43.711 — Discover, do not guess
 
 **Picture**
 
-- Click **Copy agent prompt**.
-- Paste the exact prompt into the agent.
-- Briefly highlight the fictional phone number, $125 amount, and instruction to stop for approval.
+- Show both discovered WebMCP tool names, descriptions, and exact input schemas.
+- Hold the receipt **2 PAGE-OWNED TOOLS · 0 BUTTON COORDINATES**.
 
 **Narration**
 
-> I ask it to find fictional customer plus-one 202-555-0120, prepare a 125-dollar draft for a September accessibility audit, and stop before anything is created.
+> The agent discovers names, descriptions, and schemas directly from the page. No button coordinates. No brittle D O M recipe. Just two bounded capabilities the website intentionally published.
 
-### 0:58–1:15 — Execute the read tool
+### 0:43.711–0:59.882 — One exact request
 
 **Picture**
 
-- Show the agent call `find_customer`.
-- Show the Site populate `CUS-2001`, Araya Niran, phone, and status.
-- Briefly show the “Structured read” audit event.
+- Type the exact judge prompt in full.
+- Sequentially emphasize the phone number, amount, description, and instruction to stop for approval.
 
 **Narration**
 
-> The read returns a small, validated result: customer CUS-2001. No credential or real customer record is involved.
+> I ask GhostLayer to find fictional customer plus one, two oh two, five five five, zero one two zero; prepare a one hundred twenty five dollar draft for a September accessibility audit; and stop before anything is created.
 
-### 1:15–1:38 — Make the consequential boundary visible
+### 0:59.882–1:11.487 — A bounded read
 
 **Picture**
 
-- Show the agent call `create_invoice_draft`.
-- Keep the invoice count at zero in frame.
-- Show the approval panel with customer, description, amount, and two-minute window.
-- Pause for one beat before moving the pointer.
+- Show the native **find_customer** execution.
+- Resolve on **CUS-2001**, **Araya Niran**, and **active**.
+- Hold the disclosure **FICTIONAL RECORD · NO CREDENTIALS**.
 
 **Narration**
 
-> The second tool does not create immediately. Its promise stays pending while GhostLayer shows the exact effect. The invoice count is still zero, and the human can reject without a write.
+> The read returns a small, validated result: customer C U S two zero zero one, Araya Niran. No credential or real customer record is involved.
 
-### 1:38–1:53 — Demonstrate rejection
+### 1:11.487–1:26.612 — Zero until approval
 
 **Picture**
 
-- Click **Reject — create nothing**.
-- Show the zero invoice count and “Human rejected” audit event.
-- Use a clean cut to a second invocation of the same $125 request.
+- Place agent preparation and the human review panel side by side.
+- Show the exact customer, description, **$125**, and two-minute review window.
+- Make **INVOICE DRAFTS 0** the dominant held proof.
 
 **Narration**
 
-> I reject the first attempt. The call ends and nothing is created. Then I ask the agent to prepare the same draft again.
+> The second call does not create immediately. Its promise stays pending while GhostLayer shows the exact customer, description, amount, and two minute window. The invoice count is still zero, and the human has the final decision.
 
-### 1:53–2:13 — Approve once
+### 1:26.612–1:37.513 — Reject means create nothing
 
 **Picture**
 
-- Show the approval panel again.
-- Click **Approve and create once**.
-- Show `INV-DEMO-0001`, one table row, and the returned structured tool result.
+- Show the real **Reject — create nothing** interaction.
+- Resolve on **HUMAN REJECTED** and **0 DRAFTS**.
+- End with the same request prepared again.
 
 **Narration**
 
-> This time I approve. The tool returns only after my decision, and one tab-local demo invoice appears.
+> I reject the first attempt. The invocation ends, the audit records the decision, and zero drafts exist. Then the agent prepares the same request again.
 
-### 2:13–2:28 — Replay without a duplicate
+### 1:37.513–1:51.550 — Approve once
 
 **Picture**
 
-- Invoke `create_invoice_draft` again with the same customer, description, and amount.
-- Show the returned `INV-DEMO-0001` with `replayed: true`.
-- Hold on the invoice count of one and a single table row.
+- Establish the second pending approval.
+- Show the real **Approve and create once** control before the state changes.
+- Travel from the human decision to **INV-DEMO-0001**, **$125.00**, and one draft.
 
 **Narration**
 
-> Replaying the same normalized request returns the same demo invoice. The table still has one row. This replay protection is intentionally scoped to the current tab—not presented as a global exactly-once guarantee.
+> This time I approve. Only then does the tool return, and one tab-local demo invoice appears: I N V demo zero zero zero one. The write happens once, after an explicit human decision.
 
-### 2:28–2:41 — Put the human kill switch in control
+### 1:51.550–2:08.958 — Replay and kill switch
 
 **Picture**
 
-- Click **Pause agent tools**.
-- Show “Paused by human” and an empty discovered-tool list.
-- Click **Resume agent tools** and show both tools return.
+- Show **replayed: true**, the same invoice ID, and one table row.
+- Pause the agent surface and show discovery return no tools.
+- Resume and show the same two bounded contracts return.
 
 **Narration**
 
-> The human can remove the complete agent surface at any time, then restore the same bounded contract when ready.
+> Replaying the same normalized request returns that same invoice, with replayed true. The table still has one row. Then the human pauses the agent surface; discovery returns no tools. Resume restores the same two bounded contracts.
 
-### 2:41–2:52 — Close on safety and impact
+### 2:08.958–2:23.529 — Reset and close
 
 **Picture**
 
-- Click **Reset sandbox** and show the invoice count return to zero.
-- End on the GhostLayer title card with the public Site and repository URLs.
-- On-screen text: `Fictional data · isolated tab · no credentials`.
+- Show reset returning the tab-local state to zero.
+- Disclose **FICTIONAL DATA**, **ISOLATED TAB**, **NO CREDENTIALS**, and **NO APPLICATION API**.
+- End on the GhostLayer card with the stable Site URL and public GitHub repository.
 
 **Narration**
 
-> The public sandbox is fictional, client-only, and cleared by reset, reload, or closing the tab. GhostLayer shows how WebMCP can give agents speed without giving up human authority.
+> Reset clears the tab-local state. Reload or close the tab and it starts clean. Fictional data, no credentials, no application A P I. GhostLayer shows the pattern: agent speed, human authority.
 
 ## Required proof shots
 
-Do not cut these so quickly that a judge cannot verify them:
+The final cut must leave these readable long enough for a judge to verify them:
 
-- the public URL in the address bar;
-- both discovered WebMCP tool names;
-- the exact prompt;
-- structured customer ID `CUS-2001`;
-- invoice count `0` while approval is pending;
-- reject followed by zero drafts;
-- approve followed by `INV-DEMO-0001` and one row;
-- replay returning the same ID with one row still visible;
-- pause with the discovered tool list empty;
-- reset returning the sandbox to zero.
+- both WebMCP tool names and their typed schemas;
+- the complete exact judge prompt;
+- structured customer ID **CUS-2001**;
+- invoice count **0** while the consequential call is pending;
+- rejection followed by zero drafts;
+- approval followed by **INV-DEMO-0001**, **$125.00**, and one row;
+- replay returning the same ID while the table remains at one row;
+- pause with the discovered-tool surface empty and resume with two tools;
+- reset returning the sandbox to zero;
+- the stable challenge Site URL and public source repository on the end card.
 
-## Recording notes
+## Truth and safety constraints
 
-- Record one clean browser interaction pass first, then add narration; this makes the two-minute approval UI easy to time without rushing.
-- Keep the cursor still while key evidence is on screen.
-- Use cuts between rejection and the second invocation; do not fake tool results or replace the real interaction with a mockup.
-- If a browser permission or experimental warning appears, explain it once in a small caption and keep the demo moving.
-- Do not show the private `/pilot`, `/pilot/admin`, extension popup, D1 console, secret settings, or owner identity in the challenge video.
-- Do not claim that the challenge sandbox writes to a server. Say “tab-local demo draft.”
-- Do not claim global exactly-once behavior. Say “the same normalized request replays the same invoice in this tab.”
-- Keep captions inside title-safe margins and ensure the code/tool names remain readable at 1080p.
+- Use the real captured Challenge Edition and native WebMCP proof; do not invent tool results or a fake agent chat.
+- Describe created records as **tab-local demo drafts**, not server or D1 writes.
+- Describe replay as scoped to the same normalized request in the current tab; do not claim global exactly-once execution.
+- Do not show the private **/pilot**, **/pilot/admin**, extension popup, database console, secret settings, or owner identity.
+- Do not show a local filesystem path, personal account, token, notification, or unrelated browser tab.
+- Keep captions inside title-safe margins and keep tool names, values, decisions, and URLs readable at 1080p.
 
 ## Final export and upload check
 
-- [ ] Final duration is below 3:00, including the last frame and any platform-added slate.
-- [ ] Voice is audible on a phone speaker and no music masks it.
-- [ ] Captions match the narration and spell `WebMCP`, `find_customer`, and `create_invoice_draft` correctly.
-- [ ] No private URL, email, token, account avatar, local filesystem path, or notification is visible.
-- [ ] The displayed Site URL is the final public challenge deployment.
-- [ ] The end card includes the public source repository URL.
+- [ ] **renders/video.mp4** exists and its measured duration is 143.529 seconds.
+- [ ] Voice is audible on a phone speaker; captions match the narration.
+- [ ] Captions spell **WebMCP**, **find_customer**, **create_invoice_draft**, **CUS-2001**, and **INV-DEMO-0001** correctly.
+- [ ] No private URL, email, token, account avatar, local path, or notification is visible.
+- [ ] The end card contains the stable challenge Site URL and public source repository.
 - [ ] The YouTube visibility is Public and playback works while signed out.
-- [ ] The uploaded link is copied into `README.md` and `docs/CHALLENGE-SUBMISSION.md`.
+- [ ] The public video URL is copied into **README.md** and **docs/CHALLENGE-SUBMISSION.md**.
