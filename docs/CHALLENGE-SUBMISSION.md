@@ -6,7 +6,7 @@ Replace every **[PENDING]** field before pasting this text into Devpost. This pu
 
 - Project name: **GhostLayer — Agent Speed, Human Authority**
 - Live website: **[PENDING — final public challenge Site URL]**
-- Public source repository: **[PENDING — final public repository URL]**
+- Public source repository: **[github.com/wasutha-bbn/ghostlayer-webmcp-challenge](https://github.com/wasutha-bbn/ghostlayer-webmcp-challenge)**
 - Public video: **[PENDING — final public YouTube URL, under 3:00]**
 - License: **Apache-2.0**
 

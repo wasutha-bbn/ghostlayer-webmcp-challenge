@@ -12,7 +12,7 @@ The core idea is simple: **the agent prepares; the human remains the authority**
 ## Challenge links
 
 - Live judge sandbox: **[PENDING — add the final public URL before submission]**
-- Public source repository: **[PENDING — add the final public repository URL before submission]**
+- Public source repository: **[github.com/wasutha-bbn/ghostlayer-webmcp-challenge](https://github.com/wasutha-bbn/ghostlayer-webmcp-challenge)**
 - Public demo video: **[PENDING — add the final public YouTube URL before submission]**
 - Ready-to-paste submission copy: [docs/CHALLENGE-SUBMISSION.md](docs/CHALLENGE-SUBMISSION.md)
 - Demo narration and shot plan: [docs/DEMO-SCRIPT.md](docs/DEMO-SCRIPT.md)
