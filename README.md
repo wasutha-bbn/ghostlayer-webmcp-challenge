@@ -11,7 +11,7 @@ The core idea is simple: **the agent prepares; the human remains the authority**
 
 ## Challenge links
 
-- Live judge sandbox: **[PENDING — add the final public URL before submission]**
+- Live judge sandbox: **[ghostlayer-agent-authority.humble-flea-4717.chatgpt.site](https://ghostlayer-agent-authority.humble-flea-4717.chatgpt.site/)**
 - Public source repository: **[github.com/wasutha-bbn/ghostlayer-webmcp-challenge](https://github.com/wasutha-bbn/ghostlayer-webmcp-challenge)**
 - Public demo video: **[PENDING — add the final public YouTube URL before submission]**
 - Ready-to-paste submission copy: [docs/CHALLENGE-SUBMISSION.md](docs/CHALLENGE-SUBMISSION.md)
@@ -135,7 +135,7 @@ Vitest checks the two-minute approval expiry deterministically with fake timers.
 After deployment, run the signed-out preflight against the exact public origin:
 
 ```bash
-pnpm verify:deployment https://your-public-site.example
+pnpm verify:deployment https://ghostlayer-agent-authority.humble-flea-4717.chatgpt.site
 ```
 
 The preflight requires an unauthenticated HTTP 200 response, the expected challenge copy, no application cookie, the configured security headers, and HTTP 404 responses for the owner-only prototype routes that must not exist in this package.

@@ -1,4 +1,5 @@
 const isolatedRoutes = ['/pilot', '/pilot/admin', '/pilot/legacy', '/api/pilot/state'];
+const infrastructureCookieNames = new Set(['__cf_bm']);
 
 function normalizeOrigin(value) {
   if (!value) throw new Error('Pass a deployment origin as the first argument or set SITE_ORIGIN.');
@@ -54,7 +55,15 @@ async function main() {
   expectHeader(failures, root, 'x-content-type-options', 'nosniff');
   expectHeader(failures, root, 'referrer-policy', 'no-referrer');
   expectHeader(failures, root, 'permissions-policy', ['camera=()', 'geolocation=()', 'microphone=()', 'payment=()', 'usb=()']);
-  if (root.headers.has('set-cookie')) failures.push('The public sandbox unexpectedly sets a cookie.');
+  const setCookies = typeof root.headers.getSetCookie === 'function'
+    ? root.headers.getSetCookie()
+    : [root.headers.get('set-cookie')].filter(Boolean);
+  const applicationCookies = setCookies
+    .map((value) => value.split('=', 1)[0].trim())
+    .filter((name) => !infrastructureCookieNames.has(name));
+  if (applicationCookies.length > 0) {
+    failures.push(`The public sandbox unexpectedly sets application cookies: ${applicationCookies.join(', ')}.`);
+  }
 
   const routeResults = await Promise.all(isolatedRoutes.map(async (path) => ({ path, response: await request(origin, path) })));
   for (const { path, response } of routeResults) {
