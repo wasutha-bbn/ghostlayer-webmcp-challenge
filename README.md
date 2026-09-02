@@ -24,7 +24,7 @@ The repository history starts with this standalone challenge package and provide
 
 - Live judge sandbox: **[ghostlayer-agent-authority.humble-flea-4717.chatgpt.site](https://ghostlayer-agent-authority.humble-flea-4717.chatgpt.site/)**
 - Public source repository: **[github.com/wasutha-bbn/ghostlayer-webmcp-challenge](https://github.com/wasutha-bbn/ghostlayer-webmcp-challenge)**
-- Public demo video: **[PENDING — add the final public YouTube URL before submission]**
+- Public demo video: **[youtube.com/watch?v=zhuwHpvbHQY](https://www.youtube.com/watch?v=zhuwHpvbHQY)**
 - Ready-to-paste submission copy: [docs/CHALLENGE-SUBMISSION.md](docs/CHALLENGE-SUBMISSION.md)
 - Demo narration and shot plan: [docs/DEMO-SCRIPT.md](docs/DEMO-SCRIPT.md)
 - License: [Apache License 2.0](LICENSE)

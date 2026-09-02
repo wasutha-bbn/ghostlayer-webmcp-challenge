@@ -1,13 +1,13 @@
 # GhostLayer WebMCP Challenge submission draft
 
-The live Site and source repository are final. Replace the remaining public-video placeholder after the YouTube upload. This public package contains only the client-only challenge sandbox; the separate owner-only prototype is not included.
+The live Site, source repository, and public demo video are final. This public package contains only the client-only challenge sandbox; the separate owner-only prototype is not included.
 
 ## Submission links
 
 - Project name: **GhostLayer — Agent Speed, Human Authority**
 - Live website: **[ghostlayer-agent-authority.humble-flea-4717.chatgpt.site](https://ghostlayer-agent-authority.humble-flea-4717.chatgpt.site/)**
 - Public source repository: **[github.com/wasutha-bbn/ghostlayer-webmcp-challenge](https://github.com/wasutha-bbn/ghostlayer-webmcp-challenge)**
-- Public video: **[PENDING — final public YouTube URL, under 3:00]**
+- Public video: **[youtube.com/watch?v=zhuwHpvbHQY](https://www.youtube.com/watch?v=zhuwHpvbHQY)** — 2:24
 - License: **Apache-2.0**
 
 ## One-line tagline
@@ -151,9 +151,9 @@ Published deadline: **September 3, 2026 at 1:00 PM PDT**, equivalent to **Septem
 - [x] Confirm the source repository is public while signed out.
 - [x] Confirm `README.md`, setup commands, source, and `LICENSE` are visible in that public repository.
 - [x] Remove or sanitize private deployment identifiers and unrelated generated artifacts from the public package.
-- [ ] Replace the video placeholder with a public YouTube URL.
+- [x] Replace the video placeholder with a public YouTube URL.
 - [x] Confirm the rendered video is shorter than three minutes and contains audible narration audio.
 - [ ] Watch the uploaded video once while signed out.
-- [ ] Run the exact judge prompt on the final deployed build.
+- [x] Run the exact judge prompt on the final deployed build.
 - [x] Confirm reject creates zero drafts, approve creates one, replay does not add a row, and pause removes both tools.
-- [ ] Paste the final link values into this document and the root README.
+- [x] Paste the final link values into this document and the root README.
