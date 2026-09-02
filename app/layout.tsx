@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'GhostLayer — Human-governed WebMCP challenge sandbox',
-  description: 'A safe, fictional CRM where agents use structured WebMCP tools and humans approve consequential actions.',
+  title: 'GhostLayer — Human authority for agent-ready SaaS',
+  description: 'A human authority layer for SaaS teams exposing consequential actions through WebMCP, proven in a safe public CRM sandbox.',
   metadataBase: new URL(process.env.SITE_ORIGIN ?? 'http://localhost:4176'),
   openGraph: {
     title: 'GhostLayer — Agent speed, human authority',

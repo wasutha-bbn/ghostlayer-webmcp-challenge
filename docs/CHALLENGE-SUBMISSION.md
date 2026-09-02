@@ -16,13 +16,15 @@ GhostLayer lets websites give agents fast, typed WebMCP tools while keeping cons
 
 ## Short description
 
-GhostLayer is a fictional CRM sandbox that publishes two page-owned WebMCP tools: a structured customer lookup and a governed invoice-draft action. The agent can prepare work quickly, but the consequential call remains pending until the human reviews the exact effect and chooses approve or reject. The public demo uses only isolated, tab-local data—no credentials, database, or real customer system.
+GhostLayer is a human-authority layer for SaaS teams exposing consequential actions through WebMCP. Its public CRM sandbox publishes a structured customer lookup and a governed invoice-draft action. The agent prepares work quickly, but the consequential call remains pending until the human reviews the exact effect and approves or rejects it. The demo uses isolated, fictional, tab-local data.
 
 ## Full project description
 
 Most browser agents still have to infer intent from interfaces designed for people. They guess which button matters, depend on DOM details that can move, and often struggle to distinguish a harmless read from a consequential write.
 
 GhostLayer explores a different contract: the website declares what an agent can do.
+
+The target audience is product and platform teams adding agent access to commerce operations, finance workflows, support consoles, and back-office administration. GhostLayer does not replace their identity, policy, database, or business API. It adds a typed agent contract and a human-owned decision point before consequential work commits.
 
 The Challenge Edition turns a fictional CRM into a native WebMCP surface with two bounded tools. `find_customer` performs an exact lookup and returns a typed result. `create_invoice_draft` accepts the returned customer ID, a short description, and a fictional amount, but does not immediately create anything. The tool call pauses while the site displays the exact customer, description, amount, and two-minute approval window. Rejection and expiry create no draft. Approval creates one tab-local demo draft; repeating the same normalized request returns that draft instead of adding a duplicate row.
 
@@ -50,7 +52,7 @@ WebMCP changes the unit of browser automation from “guess how to operate this 
 
 ## How we built it
 
-GhostLayer uses Next.js/React with Vinext and the OpenAI Sites runtime. A small shared bridge registers validated page-owned tools with `document.modelContext`, feature-detects native WebMCP, validates strict adapter schemas, limits provider output, and disposes registrations through an `AbortController`.
+GhostLayer uses Next.js/React with Vinext and the OpenAI Sites runtime. Its bounded adapter schema and WebMCP bridge began in the earlier 0.5 foundation and are reused transparently here. The bridge registers validated page-owned tools with `document.modelContext`, feature-detects native WebMCP, validates strict schemas, limits provider output, and disposes registrations through an `AbortController`.
 
 The challenge tool contract declares exact-origin availability and two risk levels. The React application implements the handlers and owns the visible approval promise. The client normalizes amounts and descriptions, limits the demo to known fictional customer IDs and eight drafts per tab, expires pending approval after two minutes, and retains only a short on-screen audit timeline.
 
@@ -58,7 +60,7 @@ Vitest deterministically verifies strict validation, replay keys, and two-minute
 
 ## Challenge-period provenance
 
-GhostLayer had an earlier private adapter/extension prototype. The standalone public Challenge Edition in this repository was created during the submission period as a new directly testable WebMCP application. Its challenge-period work includes the client-only judge sandbox, direct page-owned native tool registration, visible pending approval, rejection/expiry semantics, same-tab replay, Pause/Resume lifecycle control, Reset behavior, deployment isolation, and the accompanying unit, browser, and deployment verification. The dated public commit history records this package; the earlier owner-only prototype is not included or required to run the submission.
+GhostLayer had an earlier private adapter/extension prototype. This submission reuses the 0.5 adapter schema and WebMCP bridge rather than claiming they were created from scratch. The standalone public Challenge Edition was created during the submission period as a new directly testable product experience: the client-only judge sandbox, direct page-owned native registration, visible pending approval, rejection/expiry semantics, same-tab replay, Pause/Resume lifecycle control, Reset behavior, deployment isolation, and accompanying verification. The private owner application, extension, control plane, and credentials are not included or required to run the submission.
 
 ## The human-agent experience
 
@@ -87,7 +89,7 @@ The complete path is interactive and inspectable: structured read, strict valida
 
 ### Potential impact
 
-The same pattern can apply to support consoles, internal operations, commerce back offices, and regulated workflows: allow agents to assemble or prepare work quickly while the product retains policy checks and human authority at the point of consequence.
+The same pattern can apply to support consoles, internal operations, commerce back offices, and regulated workflows: allow agents to assemble or prepare work quickly while the product retains policy checks and human authority at the point of consequence. A production team keeps its existing backend, then connects authenticated approval, server-side policy, durable idempotency, and an audit receipt at the commit boundary shown in the public app.
 
 ### Creativity and ambition
 

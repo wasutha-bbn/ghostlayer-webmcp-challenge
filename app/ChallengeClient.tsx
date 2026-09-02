@@ -298,15 +298,21 @@ export function ChallengeClient() {
     <main className="challenge-shell" data-testid="challenge-app" data-interactive={interactive ? 'true' : 'false'}>
       <header className="challenge-nav">
         <a className="challenge-brand" href="/"><span>G</span><div><strong>GhostLayer</strong><small>Challenge Edition</small></div></a>
-        <div className={`challenge-provider ${paused ? 'paused' : providerStatus}`} data-testid="challenge-webmcp-status"><i />{providerLabel}</div>
+        <div className="challenge-nav-actions">
+          <nav aria-label="Challenge navigation"><a href="#live-demo">Live demo</a><a href="#integrate">Integration</a><a href="https://github.com/wasutha-bbn/ghostlayer-webmcp-challenge" target="_blank" rel="noreferrer">Source ↗</a></nav>
+          <div className={`challenge-provider ${paused ? 'paused' : providerStatus}`} data-testid="challenge-webmcp-status"><i />{providerLabel}</div>
+        </div>
       </header>
 
       <section className="challenge-hero">
         <div>
-          <p className="challenge-eyebrow">WebMCP Challenge · safe judge sandbox</p>
+          <p className="challenge-eyebrow">Human authority layer for agent-ready SaaS</p>
           <h1>Give agents tools.<br /><em>Keep humans in control.</em></h1>
-          <p>GhostLayer turns a fictional CRM into a structured agent surface. Reads are fast; consequential work stops at a visible approval boundary.</p>
-          <div className="challenge-hero-actions"><button className="challenge-button primary" disabled={!interactive} onClick={() => void copyPrompt()}>{copied ? 'Prompt copied ✓' : 'Copy agent prompt'}</button><button className="challenge-button secondary" disabled={!interactive} onClick={resetSandbox}>Reset sandbox</button></div>
+          <p>GhostLayer helps SaaS teams expose fast, typed WebMCP actions without giving agents unchecked authority. This public CRM sandbox proves the full loop: discover, prepare, review, and commit.</p>
+          <ul className="challenge-audience" aria-label="Designed for consequential SaaS workflows">
+            <li>Commerce operations</li><li>Finance workflows</li><li>Back-office administration</li>
+          </ul>
+          <div className="challenge-hero-actions"><button className="challenge-button primary" disabled={!interactive} onClick={() => void copyPrompt()}>{copied ? 'Prompt copied ✓' : 'Copy agent prompt'}</button><a className="challenge-button secondary" href="#integrate">See production path</a><button className="challenge-button secondary" disabled={!interactive} onClick={resetSandbox}>Reset sandbox</button></div>
         </div>
         <ol className="challenge-principles">
           <li><span>01</span><div><strong>Discover</strong><p>The page publishes two typed tools directly through WebMCP.</p></div></li>
@@ -315,7 +321,7 @@ export function ChallengeClient() {
         </ol>
       </section>
 
-      <section className="challenge-prompt" aria-label="Suggested agent prompt">
+      <section className="challenge-prompt" id="live-demo" aria-label="Suggested agent prompt">
         <div><span>Try with your agent</span><strong>One prompt, two structured tools, one human decision.</strong></div>
         <p>{CHALLENGE_PROMPT}</p>
         <button disabled={!interactive} onClick={() => void copyPrompt()} aria-label="Copy suggested agent prompt">{copied ? 'Copied' : 'Copy'}</button>
@@ -370,7 +376,40 @@ export function ChallengeClient() {
         </article>
       </section>
 
-      <footer className="challenge-footer"><strong>GhostLayer Challenge Edition</strong><span>Fictional data · isolated tab state · no credentials · reset anytime</span><a href="https://github.com/webmachinelearning/webmcp" target="_blank" rel="noreferrer">Built with WebMCP ↗</a></footer>
+      <section className="challenge-integration" id="integrate" data-testid="challenge-integration">
+        <header>
+          <div><span>Production integration path</span><h2>From a safe sandbox to your production API.</h2></div>
+          <div><p>GhostLayer is for SaaS teams exposing commerce, finance, and administrative actions to agents. Keep the system you already trust; add a typed WebMCP contract and a human-owned commit boundary.</p><a href="https://github.com/wasutha-bbn/ghostlayer-webmcp-challenge/blob/main/app/ChallengeClient.tsx" target="_blank" rel="noreferrer">Inspect the working integration ↗</a></div>
+        </header>
+
+        <ol className="challenge-pipeline" aria-label="Production request path">
+          <li><span>01</span><strong>Agent request</strong><p>Calls a named, typed business capability.</p></li>
+          <li><span>02</span><strong>WebMCP contract</strong><p>The page validates intent, input, origin, and risk.</p></li>
+          <li><span>03</span><strong>GhostLayer review</strong><p>Consequential work waits for the signed-in human.</p></li>
+          <li><span>04</span><strong>Your backend API</strong><p>Commit once, enforce policy, and return a receipt.</p></li>
+        </ol>
+
+        <div className="challenge-integration-grid">
+          <article>
+            <span>What this public app proves today</span>
+            <h3>A complete human-agent decision loop</h3>
+            <ul><li>Two page-owned tools registered through native WebMCP</li><li>Strict adapter schema and bounded provider output</li><li>Visible approval with zero-write rejection and expiry</li><li>Replay protection, Pause/Resume lifecycle, and Reset</li></ul>
+          </article>
+          <article>
+            <span>What a production adopter connects</span>
+            <h3>Your identity, policy, storage, and API</h3>
+            <ul><li>Authenticate the approving user and enforce RBAC</li><li>Persist pending actions and idempotency keys server-side</li><li>Execute the consequential commit in a trusted backend</li><li>Store a durable audit receipt for every decision</li></ul>
+          </article>
+        </div>
+
+        <div className="challenge-foundation">
+          <div><span>Built on GhostLayer 0.5</span><strong>Adapter schema + WebMCP bridge</strong></div>
+          <p>The Challenge Edition reuses the bounded contract and registration foundation from the earlier owner-only prototype, then adds this new public native WebMCP experience. The extension, private control plane, and production credentials are intentionally outside the judge sandbox.</p>
+          <a href="https://github.com/wasutha-bbn/ghostlayer-webmcp-challenge#architecture" target="_blank" rel="noreferrer">Read the architecture ↗</a>
+        </div>
+      </section>
+
+      <footer className="challenge-footer"><strong>GhostLayer Challenge Edition</strong><span>For SaaS teams · fictional judge data · isolated tab state · no credentials</span><a href="https://github.com/webmachinelearning/webmcp" target="_blank" rel="noreferrer">Built with WebMCP ↗</a></footer>
     </main>
   );
 }

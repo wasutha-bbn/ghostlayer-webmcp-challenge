@@ -35,6 +35,8 @@ test.describe.serial('GhostLayer Challenge Edition', () => {
     });
     await page.goto(CHALLENGE_BASE);
     await expect(page.getByRole('heading', { name: /Give agents tools/ })).toBeVisible();
+    await expect(page.getByText('Human authority layer for agent-ready SaaS')).toBeVisible();
+    await expect(page.getByTestId('challenge-integration')).toContainText('From a safe sandbox to your production API.');
     await expect(page.getByTestId('challenge-app')).toHaveAttribute('data-interactive', 'true');
     await expect(page.getByTestId('challenge-invoice-count')).toHaveText('0');
 

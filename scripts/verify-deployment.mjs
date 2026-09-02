@@ -46,7 +46,7 @@ async function main() {
   const contentType = root.headers.get('content-type') ?? '';
   if (!contentType.toLowerCase().includes('text/html')) failures.push(`Root content type is ${JSON.stringify(contentType)}, not HTML.`);
 
-  for (const marker of ['Give agents tools.', 'find_customer', 'create_invoice_draft', 'WebMCP Challenge']) {
+  for (const marker of ['Give agents tools.', 'find_customer', 'create_invoice_draft', 'Human authority layer for agent-ready SaaS', 'From a safe sandbox to your production API.']) {
     if (!html.includes(marker)) failures.push(`Root HTML is missing ${JSON.stringify(marker)}.`);
   }
 

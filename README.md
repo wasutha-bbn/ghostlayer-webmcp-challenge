@@ -1,6 +1,6 @@
 # GhostLayer — Agent speed, human authority
 
-GhostLayer is a human-governed WebMCP prototype. Instead of making an agent infer actions from pixels and DOM structure, the website publishes explicit, typed tools that the agent can discover and call. Fast read operations can complete immediately; a consequential operation stays pending until the person sees the exact effect and approves it.
+GhostLayer is a human-authority layer for SaaS teams exposing business actions through WebMCP. Instead of making an agent infer actions from pixels and DOM structure, the website publishes explicit, typed tools that the agent can discover and call. Fast read operations can complete immediately; a consequential operation stays pending until the person sees the exact effect and approves it.
 
 The WebMCP Challenge edition is a deliberately safe, fictional CRM sandbox. It exposes two page-owned tools:
 
@@ -9,9 +9,15 @@ The WebMCP Challenge edition is a deliberately safe, fictional CRM sandbox. It e
 
 The core idea is simple: **the agent prepares; the human remains the authority**.
 
+## Who it is for
+
+GhostLayer is designed for product and platform teams adding agent access to commerce operations, finance workflows, support consoles, and back-office administration. It does not replace an application's identity, policy, database, or business API. It gives those existing systems a legible agent contract and a human-owned decision point before consequential work commits.
+
+The public Challenge Edition uses fictional, tab-local data so anyone can exercise that complete decision loop safely. A production adopter would connect the same pattern to authenticated users, server-side policy checks, durable idempotency, an existing backend API, and an audit store.
+
 ## Challenge-period work
 
-GhostLayer began as a private adapter/extension prototype. This standalone **Challenge Edition** was created during the WebMCP Challenge submission period as a new public, directly testable WebMCP application. The challenge-period work in this repository includes:
+GhostLayer began as a private adapter/extension prototype. The Challenge Edition carries forward its bounded adapter schema and WebMCP registration bridge. This standalone public application was created during the WebMCP Challenge submission period as a new directly testable human-agent experience. The challenge-period work in this repository includes:
 
 - the client-only fictional CRM judge sandbox;
 - direct page-owned registration of `find_customer` and `create_invoice_draft` through `document.modelContext`;
@@ -60,6 +66,33 @@ Traditional browser agents often have to guess which control to click, how a pag
 - automation no longer depends on the visual position of a button.
 
 WebMCP is not treated as an authorization boundary. GhostLayer validates inputs and outputs inside the provider and keeps the human decision inside the application.
+
+## From sandbox to a production app
+
+```text
+Agent request
+    │ named, typed business capability
+    ▼
+WebMCP contract
+    │ validate intent, input, exact origin, and risk
+    ▼
+GhostLayer human review
+    ├─ reject / expire ──► zero writes
+    └─ approve
+           │ authenticated, policy-checked commit
+           ▼
+Existing backend API ──► durable receipt returned to the agent
+```
+
+The integration path is intentionally small:
+
+1. Define each business capability and risk class in a strict adapter contract.
+2. Register page-owned handlers through the GhostLayer WebMCP bridge.
+3. Let read-only handlers call the application's existing API normally.
+4. For consequential handlers, create a pending action and show the exact effect to the signed-in user.
+5. On approval, re-check identity and policy server-side, commit once with an idempotency key, and store an audit receipt.
+
+The Challenge Edition proves steps 1–4 and the complete visible decision experience with isolated data. A production deployment supplies the authenticated server-side commit and durable storage in step 5.
 
 ## Public sandbox safety model
 
@@ -164,9 +197,9 @@ The provided submission draft maps the project to the published judging themes: 
 
 The published deadline is September 3, 2026 at 1:00 PM PDT, which is September 4, 2026 at 03:00 in Bangkok.
 
-## Separate owner-only prototype
+## GhostLayer 0.5 foundation and separate owner-only prototype
 
-A deeper owner-only prototype explores authenticated server persistence, durable approval/idempotency, administration, and legacy-extension compatibility. It is intentionally not included in this public challenge repository and is not required to run or judge this sandbox.
+The `adapter-schema` and `webmcp-bridge` packages were developed as part of the GhostLayer 0.5 foundation and are reused here. A deeper owner-only 0.5 prototype also explores authenticated server persistence, durable approval/idempotency, administration, signed adapters, and legacy-extension compatibility. That private application and extension are intentionally not included in this public challenge repository and are not required to run or judge this sandbox.
 
 ## Scope and limitations
 
