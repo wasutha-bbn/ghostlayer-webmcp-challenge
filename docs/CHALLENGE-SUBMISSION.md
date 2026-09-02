@@ -56,6 +56,10 @@ The challenge tool contract declares exact-origin availability and two risk leve
 
 Vitest deterministically verifies strict validation, replay keys, and two-minute approval expiry with fake timers. Playwright browser scenarios cover route isolation, absence of application API calls, tab isolation, zero-write rejection, approval, and the native WebMCP discovery/execution/replay/pause chain in a compatible Chromium build.
 
+## Challenge-period provenance
+
+GhostLayer had an earlier private adapter/extension prototype. The standalone public Challenge Edition in this repository was created during the submission period as a new directly testable WebMCP application. Its challenge-period work includes the client-only judge sandbox, direct page-owned native tool registration, visible pending approval, rejection/expiry semantics, same-tab replay, Pause/Resume lifecycle control, Reset behavior, deployment isolation, and the accompanying unit, browser, and deployment verification. The dated public commit history records this package; the earlier owner-only prototype is not included or required to run the submission.
+
 ## The human-agent experience
 
 Suggested judge prompt:

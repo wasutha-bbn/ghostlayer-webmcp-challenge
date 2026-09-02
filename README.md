@@ -9,6 +9,17 @@ The WebMCP Challenge edition is a deliberately safe, fictional CRM sandbox. It e
 
 The core idea is simple: **the agent prepares; the human remains the authority**.
 
+## Challenge-period work
+
+GhostLayer began as a private adapter/extension prototype. This standalone **Challenge Edition** was created during the WebMCP Challenge submission period as a new public, directly testable WebMCP application. The challenge-period work in this repository includes:
+
+- the client-only fictional CRM judge sandbox;
+- direct page-owned registration of `find_customer` and `create_invoice_draft` through `document.modelContext`;
+- the visible pending human-approval boundary, zero-write rejection/expiry, same-tab replay protection, Pause/Resume lifecycle control, and Reset behavior;
+- the strict challenge contract, bounded provider bridge, manual fallback, public deployment isolation, and automated unit/browser/deployment verification.
+
+The repository history starts with this standalone challenge package and provides dated commits for the work. A separate owner-only prototype is prior engineering context; it is not included in this repository, is not the live judge target, and is not required to run this submission.
+
 ## Challenge links
 
 - Live judge sandbox: **[ghostlayer-agent-authority.humble-flea-4717.chatgpt.site](https://ghostlayer-agent-authority.humble-flea-4717.chatgpt.site/)**
