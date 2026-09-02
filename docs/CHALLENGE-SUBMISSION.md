@@ -155,5 +155,5 @@ Published deadline: **September 3, 2026 at 1:00 PM PDT**, equivalent to **Septem
 - [x] Confirm the rendered video is shorter than three minutes and contains audible narration audio.
 - [ ] Watch the uploaded video once while signed out.
 - [ ] Run the exact judge prompt on the final deployed build.
-- [ ] Confirm reject creates zero drafts, approve creates one, replay does not add a row, and pause removes both tools.
+- [x] Confirm reject creates zero drafts, approve creates one, replay does not add a row, and pause removes both tools.
 - [ ] Paste the final link values into this document and the root README.
