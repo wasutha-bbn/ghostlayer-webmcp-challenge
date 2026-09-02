@@ -132,6 +132,14 @@ pnpm test:e2e
 
 Vitest checks the two-minute approval expiry deterministically with fake timers. Browser E2E covers route isolation, absence of application API calls, tab isolation, zero-write rejection, approval, and the real WebMCP discovery/execution/replay/pause chain. The native scenario launches Chromium with the experimental WebMCP feature enabled and may require a graphical environment. The visible manual flow remains useful when that API is unavailable.
 
+After deployment, run the signed-out preflight against the exact public origin:
+
+```bash
+pnpm verify:deployment https://your-public-site.example
+```
+
+The preflight requires an unauthenticated HTTP 200 response, the expected challenge copy, no application cookie, the configured security headers, and HTTP 404 responses for the owner-only prototype routes that must not exist in this package.
+
 ## Challenge requirements checklist
 
 Before submitting through the [OpenAI WebMCP Challenge page](https://openai.com/th-TH/webmcp-challenge/) and [Devpost](https://webmcp.devpost.com/), confirm that all four public artifacts are available:
